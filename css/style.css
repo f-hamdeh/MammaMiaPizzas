@@ -332,6 +332,6 @@ footer ul a {
     transform: translateX(0); /* Quando aberto */
 }
 
-/* .hidden {
+.hidden {
     display: none;
-} */
+}
