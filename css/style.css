@@ -324,12 +324,12 @@ footer ul a {
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    /* transition: transform 0.3s ease-in-out; */
-    /* transform: translateX(110%); Inicialmente fora da tela */
+    /* transition: transform 0.3s ease-in-out;
+    transform: translateX(110%); */
 }
 
-#carrinhoTab.open {
-    transform: translateX(0); /* Quando aberto */
+.carrinhoTab.open {
+    transform: translateX(0);
 }
 
 .hidden {
