@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cardápio da Pizzaria</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f8f8f8;
+            }
+            .container {
+                width: 90%;
+                max-width: 800px;
+                margin: 20px auto;
+                background: #fff;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+            h1,
+            h2 {
+                text-align: center;
+                color: #444;
+            }
+            .section {
+                margin-bottom: 30px;
+            }
+            .item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 15px;
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+            }
+            .item:last-child {
+                border-bottom: none;
+            }
+            .info {
+                flex: 1;
+            }
+            .info h3 {
+                margin: 0 0 5px;
+                color: #333;
+            }
+            .info p {
+                margin: 0;
+                color: #777;
+            }
+            .price {
+                font-weight: bold;
+                color: #444;
+            }
+            .add-btn {
+                padding: 10px 15px;
+                background-color: #28a745;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            .add-btn:hover {
+                background-color: #218838;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Cardápio da Pizzaria</h1>
+
+            <!-- Entradas -->
+            <div class="section">
+                <h2>Entradas</h2>
+                <div class="item">
+                    <div class="info">
+                        <h3>Bruschetta</h3>
+                        <p>
+                            Fatias de pão italiano com tomate, manjericão e
+                            azeite.
+                        </p>
+                        <span class="price">R$ 18,00</span>
+                    </div>
+                    <button class="add-btn">Adicionar</button>
+                </div>
+                <div class="item">
+                    <div class="info">
+                        <h3>Palitos de Queijo</h3>
+                        <p>
+                            Queijo muçarela empanado e frito, servido com molho.
+                        </p>
+                        <span class="price">R$ 22,00</span>
+                    </div>
+                    <button class="add-btn">Adicionar</button>
+                </div>
+                <div class="item">
+                    <div class="info">
+                        <h3>Carpaccio</h3>
+                        <p>
+                            Fatias finas de carne temperadas com alcaparras e
+                            azeite.
+                        </p>
+                        <span class="price">R$ 28,00</span>
+                    </div>
+                    <button class="add-btn">Adicionar</button>
+                </div>
+            </div>
+
+            <!-- Pizzas -->
+            <div class="section">
+                <h2>Pizzas</h2>
+                <div class="item">
+                    <div class="info">
+                        <h3>Margherita</h3>
+                        <p>
+                            Molho de tomate, queijo muçarela, manjericão fresco.
+                        </p>
+                        <span class="price">R$ 45,00</span>
+                    </div>
+                    <button class="add-btn">Adicionar</button>
+                </div>
+                <div class="item">
+                    <div class="info">
+                        <h3>Calabresa</h3>
+                        <p>Muçarela, calabresa fatiada, cebola.</p>
+                        <span class="price">R$ 48,00</span>
+                    </div>
+                    <button class="add-btn">Adicionar</button>
+                </div>
+                <div class="item">
+                    <div class="info">
+                        <h3>Quatro Queijos</h3>
+                        <p>Muçarela, gorgonzola, parmesão e provolone.</p>
+                        <span class="price">R$ 52,00</span>
+                    </div>
+                    <button class="add-btn">Adicionar</button>
+                </div>
+                <div class="item">
+                    <div class="info">
+                        <h3>Frango com Catupiry</h3>
+                        <p>Frango desfiado, catupiry e muçarela.</p>
+                        <span class="price">R$ 50,00</span>
+                    </div>
+                    <button class="add-btn">Adicionar</button>
+                </div>
+                <div class="item">
+                    <div class="info">
+                        <h3>Vegetariana</h3>
+                        <p>Legumes frescos, molho de tomate e muçarela.</p>
+                        <span class="price">R$ 48,00</span>
+                    </div>
+                    <button class="add-btn">Adicionar</button>
+                </div>
+                <div class="item">
+                    <div class="info">
+                        <h3>Portuguesa</h3>
+                        <p>Presunto, ovo, cebola, azeitona e muçarela.</p>
+                        <span class="price">R$ 50,00</span>
+                    </div>
+                    <button class="add-btn">Adicionar</button>
+                </div>
+                <div class="item">
+                    <div class="info">
+                        <h3>Peperoni</h3>
+                        <p>Muçarela, peperoni e molho de tomate.</p>
+                        <span class="price">R$ 55,00</span>
+                    </div>
+                    <button class="add-btn">Adicionar</button>
+                </div>
+                <div class="item">
+                    <div class="info">
+                        <h3>Especial da Casa</h3>
+                        <p>Ingredientes secretos do chef.</p>
+                        <span class="price">R$ 60,00</span>
+                    </div>
+                    <button class="add-btn">Adicionar</button>
+                </div>
+            </div>
+
+            <!-- Bebidas -->
+            <div class="section">
+                <h2>Bebidas</h2>
+                <div class="item">
+                    <div class="info">
+                        <h3>Refrigerante</h3>
+                        <p>Variedades: Coca-Cola, Guaraná, Fanta (lata).</p>
+                        <span class="price">R$ 6,00</span>
+                    </div>
+                    <button class="add-btn">Adicionar</button>
+                </div>
+                <div class="item">
+                    <div class="info">
+                        <h3>Suco Natural</h3>
+                        <p>Sabores: Laranja, Maracujá, Abacaxi.</p>
+                        <span class="price">R$ 8,00</span>
+                    </div>
+                    <button class="add-btn">Adicionar</button>
+                </div>
+                <div class="item">
+                    <div class="info">
+                        <h3>Água Mineral</h3>
+                        <p>Com ou sem gás.</p>
+                        <span class="price">R$ 4,00</span>
+                    </div>
+                    <button class="add-btn">Adicionar</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
