@@ -1,74 +1,89 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Mamma Mia Pizzas</title>
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
         <link rel="stylesheet" href="css/style.css" />
+
+        <title>Mamma Mia Pizzas!</title>
     </head>
     <body>
-        <header>
-            <nav>
-                <div>
-                    <img src="imagens/logo.png" alt="" class="logo" />
-                </div>
-                <div class="header" id="home">
-                    <div class="menu">
-                        <ul class="menu__texto">
-                            <li>
-                                <a href="index.html">Home</a>
-                            </li>
-                            <li>
-                                <a href="index.html">Cardápio</a>
-                            </li>
-                        </ul>
-                    </div>
-
+        <main>
+            <header>
+                <nav>
                     <div>
-                        <a href="" class="carrinho">
-                            <div>
-                                <img
-                                    src="imagens/bag.png"
-                                    alt="Carrinho de Compras"
-                                    class="carrinho__img"
-                                />
-                            </div>
-                            <div>
-                                <p>R$<span class="total"></span></p>
-                                <p><span class="itens"></span> itens</p>
-                            </div>
-                        </a>
+                        <img src="imagens/logo.png" alt="" class="logo" />
+                    </div>
+                    <div class="header" id="home">
+                        <div class="menu">
+                            <ul class="menu__texto">
+                                <li>
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li>
+                                    <a href="cardapio.html">Cardápio</a>
+                                </li>
+                            
+                            </ul>
+                        </div>
+                        <div>
+                            <a href="" class="carrinho">
+                                <div>
+                                    <img
+                                        src="imagens/bag.png"
+                                        alt="Carrinho de Compras"
+                                        class="carrinho__img"
+                                    />
+                                </div>
+                                <div>
+                                    <p>R$<span class="total">0</span></p>
+                                    <p><span class="itens">0</span> itens</p>
+                                </div>
+                            </a>
+                    </div>
+                </nav>
+            </header>
+
+            <section class="section section__hero">
+                <!-- <video autoplay loop muted plays-inline class="hero__video">
+                    <source src="imagens/smoke.mp4" type="video/mp4" />
+                </video> -->
+                <div class="section__hero__texto">
+                    <h1>Mamma Mia Pizzas</h1>
+                    <p>As melhores pizzas estão aqui!</p>
                 </div>
-            </nav>
-        </header>
+                <div>
+                    <a href="#cardapio">
+                        <a href="cardapio.html">
+                            <button type="button" class="btn btn-outline">
+                                Fazer Pedido
+                            </button>
+                        </a>
+                    </a>
+                </div>
+            </section>
 
-        <div id="menu"></div>
-
-        <div class="carrinhoTab">
-            <div id="pedidoResumo"></div>
-            <div>
-                <button class="btn" id="limparCarrinho">Limpar</button>
-                <button class="btn checkOut">Pagamento</button>
+ 
+            <div class="div__logo">
+                <img src="imagens/logo.png" alt="" class="footer__logo" />
             </div>
-        </div>
-
-        <div class="div__logo">
-            <img src="imagens/logo.png" alt="" class="footer__logo" />
-        </div>
-        <footer>
-            <div class="footer__texto">
-                <h2>Mamma Mia Pizzas</h2>
-                <p>Levando a melhor pizza para sua casa</p>
-            </div>
-            <div>
-                <ul class="menu__texto">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Fazer Pedido</a></li>
-                    <li><a href="">Status do Pedido</a></li>
-                    <li><a href="">Política de Cancelamento</a></li>
-                </ul>
-            </div>
-        </footer>
-        <script src="script.js"></script>
+            <footer>
+                <div class="footer__texto">
+                    <h2>Mamma Mia Pizzas</h2>
+                    <p>Levando a melhor pizza para sua casa</p>
+                </div>
+                <div>
+                    <ul class="menu__texto">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Fazer Pedido</a></li>
+                        <li><a href="">Status do Pedido</a></li>
+                        <li><a href="">Política de Cancelamento</a></li>
+                    </ul>
+                </div>
+            </footer>
+        </main>
     </body>
 </html>

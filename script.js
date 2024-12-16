@@ -100,6 +100,10 @@ function inicializarCarrinho() {
     atualizarResumoPedido(carrinho);
 }
 
+const carrinhoAberto = document.querySelector('.carrinho');
+const carrinhoFechado = document.querySelector('.btn-fechar');
+const carrinhoTab = document.querySelector('.carrinhoTab');
+
 // Função que adiciona um item ao carrinho e atualiza o localStorage
 function adicionarAoCarrinho(item) {
     // Pega o carrinho atual do localStorage
@@ -117,19 +121,25 @@ function adicionarAoCarrinho(item) {
 
 // Função que atualiza o resumo do pedido na página
 function atualizarResumoPedido(carrinho) {
-    let resumoHTML = '<h3>Resumo do Pedido:</h3>';
+    let resumoHTML = '';
     let total = 0;
     let nDeItens = 0;
 
     // Verifica se o carrinho está vazio
     if (carrinho.length === 0) {
-        resumoHTML = '<p>Carrinho vazio!</p>';
+        resumoHTML = '<p>Seu pedido está vazio!</p>';
+        carrinhoAberto.classList.remove('carrinho-ativo');
     } else {
         // Exibe os itens do carrinho
+        carrinhoAberto.classList.add('carrinho-ativo');
         carrinho.forEach((item, index) => {
-            resumoHTML += `<p>Item ${index + 1}: ${item.nome} (${
-                item.tipo
-            }) - R$ ${item.preco}</p>`;
+            resumoHTML += `
+            <div class='itemDoPedido'>
+                <button class='btn-remover'>X</button>
+                <p>${index + 1}. ${item.tipo} ${item.nome} - R$ ${
+                item.preco
+            }</p>
+            </div>`;
             total += item.preco;
             nDeItens = index + 1;
         });
@@ -149,6 +159,16 @@ function limparCarrinho() {
 
     // Atualiza o resumo do pedido para exibir "Carrinho vazio"
     atualizarResumoPedido([]);
+}
+
+//  Abrir e fechar a aba do carrinho:
+
+function abrirCarrinho() {
+    carrinhoTab.style.transform = 'translateX(0)';
+}
+
+function fecharCarrinho() {
+    carrinhoTab.style.transform = 'translateX(110%)';
 }
 
 // Função para exibir o menu de pizzas e bebidas
@@ -175,9 +195,13 @@ function exibirMenu() {
         },
     ];
     const bebidas = [
-        { nome: 'Coca-cola', preco: 9 },
-        { nome: 'Água', preco: 6 },
-        { nome: 'Matte Natural', preco: 8 },
+        { nome: 'Coca-Cola Normal', descricao: '350ml', preco: 9 },
+        { nome: 'Água', descricao: '500ml', preco: 6 },
+        {
+            nome: 'Chá Matte Natural',
+            descricao: 'Chá Matte Leão Original. 350ml',
+            preco: 8,
+        },
     ];
 
     let htmlPizza = `
@@ -188,13 +212,13 @@ function exibirMenu() {
         htmlPizza += `
             <div class="produto item">
                 <h3>${pizza.nome}</h3>
-                <p>${pizza.descricao}</p>
-                <p>Preço: R$ ${pizza.preco}</p>
+                <p class='produto_descrição'>${pizza.descricao}</p>
+                <p class='produto_preço'> R$ ${pizza.preco}</p>
                 <button class='btn' onclick="adicionarAoCarrinho({
                     nome: '${pizza.nome}',
                     tipo: 'Pizza',
                     preco: ${pizza.preco}
-                })">Adicionar ao Carrinho</button>
+                })">Adicionar</button>
             </div>
         `;
     });
@@ -208,12 +232,13 @@ function exibirMenu() {
         htmlBebidas += `
             <div class="produto item">
                 <h3>${bebida.nome}</h3>
-                <p>Preço: R$ ${bebida.preco}</p>
+                <p class='produto_descrição'>${bebida.descricao}</p>
+                <p class='produto_preço'>R$ ${bebida.preco}</p>
                 <button class='btn' onclick="adicionarAoCarrinho({
                     nome: '${bebida.nome}',
                     tipo: 'Bebida',
                     preco: ${bebida.preco}
-                })">Adicionar ao Carrinho</button>
+                })">Adicionar</button>
             </div>
         `;
     });
@@ -233,4 +258,11 @@ document.addEventListener('DOMContentLoaded', () => {
     document
         .getElementById('limparCarrinho')
         .addEventListener('click', limparCarrinho);
+
+    carrinhoAberto.addEventListener('click', (e) => {
+        e.preventDefault();
+        abrirCarrinho();
+    });
+
+    carrinhoFechado.addEventListener('click', fecharCarrinho);
 });
