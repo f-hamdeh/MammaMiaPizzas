@@ -357,3 +357,48 @@ footer ul a {
     column-gap: 2rem;
     align-items: center;
 }
+
+.section__reservar {
+    height: 60rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 3rem;
+    margin-top: 4rem;
+}
+
+.section__reservar h2 {
+    margin: 3rem 0;
+    margin-left: 0;
+    text-align: center;
+}
+
+.reservar {
+    display: flex;
+    justify-content: center;
+    column-gap: 7rem;
+    margin: 2rem 0;
+}
+.form-input {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.form-input input {
+    height: 3rem;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.form-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.btn-reservar {
+    align-items: center;
+}
