@@ -354,12 +354,12 @@ footer ul a {
 
 .itemDoPedido {
     display: flex;
-    column-gap: 2rem;
+    column-gap: 1rem;
     align-items: center;
 }
 
 .section__reservar {
-    height: 60rem;
+    height: 65rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -387,10 +387,21 @@ footer ul a {
     justify-content: center;
 }
 
+.form-horario {
+    display: flex;
+    column-gap: 2rem;
+}
+
 .form-input input {
     height: 3rem;
     border-radius: 0.5rem;
     margin-top: 0.5rem;
+    font-family: Poppins, sans-serif;
+    padding: 0.5rem;
+}
+
+.form-input-horario {
+    width: 14rem;
 }
 
 .form-button {

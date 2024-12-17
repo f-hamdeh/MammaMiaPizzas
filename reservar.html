@@ -80,9 +80,34 @@
                                 <label for="">Data</label>
                                 <input type='date'>
                             </div>
+
+                            <div class="form-horario">
+                                <div class="form-input form-input-horario">
+                                    <label for="horarios">Horário:</label>
+                                    <input list="lista-horarios" id="horarios" name="horarios">
+                                    <datalist id="lista-horarios">
+                                        <option value="6">
+                                        <option value="7">
+                                        <option value="9">
+                                        <option value="10">
+                                    </datalist>
+                                </div>
+                                <div class="form-input form-input-horario">
+                                    <label for="minutos">Minutos:</label>
+                                    <input list="lista-minutos" id="minutos" name="minutos">
+                                    <datalist id="lista-minutos">
+                                        <option value="0">
+                                        <option value="15">
+                                        <option value="30">
+                                        <option value="45">
+                                    </datalist>
+                                </div>
+                            </div>
+
                             <div class="form-button">
                                 <button class="btn btn-reservar">Reservar</button>
                             </div>
+
                         </form>
                     </div>
                 </div>
