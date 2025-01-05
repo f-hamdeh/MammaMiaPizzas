@@ -7,7 +7,8 @@
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         <link rel="stylesheet" href="css/style.css" />
-
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="script.js"></script>
         <title>Mamma Mia Pizzas!</title>
     </head>
     <body>
@@ -29,7 +30,6 @@
                                 <li>
                                     <a href="reservar.html">Reservar</a>
                                 </li>
-                            
                             </ul>
                         </div>
                         <div>
@@ -46,74 +46,96 @@
                                     <p><span class="itens">0</span> itens</p>
                                 </div>
                             </a>
+                        </div>
                     </div>
                 </nav>
             </header>
 
             <section class="section section__reservar">
                 <h2>Reserve sua mesa!</h2>
-            
+
                 <div class="reservar">
                     <div>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.489978918068!2d-46.69827842467025!3d-23.550839578807132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa699c021cbf6bb%3A0x62998013c044d6c2!2sCoderhouse%20Brasil!5e0!3m2!1sen!2sbr!4v1734394218773!5m2!1sen!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.489978918068!2d-46.69827842467025!3d-23.550839578807132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa699c021cbf6bb%3A0x62998013c044d6c2!2sCoderhouse%20Brasil!5e0!3m2!1sen!2sbr!4v1734394218773!5m2!1sen!2sbr"
+                            width="600"
+                            height="450"
+                            style="border: 0"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                        ></iframe>
                     </div>
                     <div>
-                       <h3>Suas informações</h3>
+                        <h3>Suas informações</h3>
                         <form action="">
                             <div class="form-input">
                                 <label for="">Seu nome</label>
-                                <input type='name'>
+                                <input type="name" />
                             </div>
                             <div class="form-input">
                                 <label for="">Telefone</label>
-                                <input type='phone'>
+                                <input type="phone" />
                             </div>
                             <div class="form-input">
                                 <label for="">Seu email</label>
-                                <input type='email'>
+                                <input type="email" />
                             </div>
                             <div class="form-input">
                                 <label for="">Número de Pessoas</label>
-                                <input type='number'>
+                                <input type="number" />
                             </div>
                             <div class="form-input">
                                 <label for="">Data</label>
-                                <input type='date'>
+                                <input type="date" id="data-da-reserva" />
                             </div>
 
                             <div class="form-horario">
                                 <div class="form-input form-input-horario">
                                     <label for="horarios">Horário:</label>
-                                    <input list="lista-horarios" id="horarios" name="horarios">
+                                    <input
+                                        list="lista-horarios"
+                                        id="horarios"
+                                        name="horarios"
+                                    />
                                     <datalist id="lista-horarios">
-                                        <option value="6">
-                                        <option value="7">
-                                        <option value="9">
-                                        <option value="10">
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
                                     </datalist>
                                 </div>
                                 <div class="form-input form-input-horario">
                                     <label for="minutos">Minutos:</label>
-                                    <input list="lista-minutos" id="minutos" name="minutos">
+                                    <input
+                                        list="lista-minutos"
+                                        id="minutos"
+                                        name="minutos"
+                                    />
                                     <datalist id="lista-minutos">
-                                        <option value="0">
-                                        <option value="15">
-                                        <option value="30">
-                                        <option value="45">
+                                        <option value="0">0</option>
+                                        <option value="15">15</option>
+                                        <option value="30">30</option>
+                                        <option value="45">45</option>
                                     </datalist>
                                 </div>
                             </div>
 
                             <div class="form-button">
-                                <button class="btn btn-reservar">Reservar</button>
+                                <button
+                                    type="submit"
+                                    onclick="reservaConfirmada()"
+                                    class="btn btn-reservar"
+                                >
+                                    Reservar
+                                </button>
                             </div>
-
                         </form>
                     </div>
                 </div>
             </section>
 
- 
             <div class="div__logo">
                 <img src="imagens/logo.png" alt="" class="footer__logo" />
             </div>
