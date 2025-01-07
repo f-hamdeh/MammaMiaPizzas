@@ -91,7 +91,7 @@ function fecharCarrinho() {
 }
 
 function pagamentoRealizado() {
-    alert('Pagamento Efetuado. Pedido sendo preparado!');
+    alert('Seu pagamento foi realizado!');
 }
 
 // Função para exibir o menu de pizzas e bebidas
